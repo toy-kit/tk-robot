@@ -1,0 +1,93 @@
+{
+  "id": "4976092",
+  "name": "robot",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "4890369",
+      "name": "title",
+      "font_class": "title",
+      "unicode": "e6e2",
+      "unicode_decimal": 59106
+    },
+    {
+      "icon_id": "20104514",
+      "name": "active",
+      "font_class": "active",
+      "unicode": "e619",
+      "unicode_decimal": 58905
+    },
+    {
+      "icon_id": "42575409",
+      "name": "input",
+      "font_class": "input",
+      "unicode": "e648",
+      "unicode_decimal": 58952
+    },
+    {
+      "icon_id": "35421333",
+      "name": "clear",
+      "font_class": "clear",
+      "unicode": "e699",
+      "unicode_decimal": 59033
+    },
+    {
+      "icon_id": "577390",
+      "name": "coord",
+      "font_class": "coord",
+      "unicode": "e769",
+      "unicode_decimal": 59241
+    },
+    {
+      "icon_id": "772815",
+      "name": "window",
+      "font_class": "window",
+      "unicode": "e616",
+      "unicode_decimal": 58902
+    },
+    {
+      "icon_id": "809962",
+      "name": "click",
+      "font_class": "click",
+      "unicode": "e655",
+      "unicode_decimal": 58965
+    },
+    {
+      "icon_id": "2674483",
+      "name": "sleep",
+      "font_class": "sleep",
+      "unicode": "e629",
+      "unicode_decimal": 58921
+    },
+    {
+      "icon_id": "3930491",
+      "name": "keyboard",
+      "font_class": "keyboard",
+      "unicode": "e618",
+      "unicode_decimal": 58904
+    },
+    {
+      "icon_id": "10905244",
+      "name": "move",
+      "font_class": "move",
+      "unicode": "e617",
+      "unicode_decimal": 58903
+    },
+    {
+      "icon_id": "12387131",
+      "name": "screen",
+      "font_class": "screen",
+      "unicode": "e90b",
+      "unicode_decimal": 59659
+    },
+    {
+      "icon_id": "26525875",
+      "name": "mouse",
+      "font_class": "mouse",
+      "unicode": "e6bd",
+      "unicode_decimal": 59069
+    }
+  ]
+}

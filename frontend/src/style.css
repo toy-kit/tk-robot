@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+.body-h {
+    height: calc(100vh - var(--spacing) * 11);
+}
+
+.border-color {
+    border-color: var(--color-border);
+}
+
+.arco-scrollbar-track-direction-vertical {
+    width: 0.75rem !important;
+}
+
+.arco-scrollbar-thumb-bar {
+    width: 0.45rem !important;
+    margin: 0 0 0 0.25rem !important;
+}
+
+.t-collapse .arco-collapse-item-content{
+    background-color: #ffffff !important;
+    padding: 0 !important;
+}
+.t-collapse .arco-collapse-item-content-box{
+    padding-top: 0 !important;
+}
+.t-collapse .arco-collapse-item-header{
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+    color: var(--color-text-2) !important;
+}
+.input-append-p-0 .arco-input-append{
+    padding: 0 !important;
+}
+.input-center input{
+    text-align: center;
+}
+.arco-btn-only-icon .arco-btn-icon{
+    margin-right: 0 !important;
+}
