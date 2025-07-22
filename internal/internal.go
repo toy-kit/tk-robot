@@ -11,7 +11,6 @@ import (
 	"time"
 
 	"github.com/go-vgo/robotgo"
-	"github.com/go-vgo/robotgo/clipboard"
 	hook "github.com/robotn/gohook"
 	"github.com/vcaesar/bitmap"
 )
@@ -322,9 +321,6 @@ func CopyStr(args Params, config Config) (any, error) {
 
 // PasteStr paste a string (support UTF-8),
 func PasteStr(args Params, config Config) (any, error) {
-	if err := clipboard.WriteAll(args.Str); err != nil {
-		return nil, err
-	}
 	err := ctrlTap("v")
 	return nil, err
 }
