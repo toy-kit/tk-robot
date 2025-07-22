@@ -11,6 +11,7 @@ import (
 	"time"
 
 	"github.com/go-vgo/robotgo"
+	"github.com/go-vgo/robotgo/clipboard"
 	hook "github.com/robotn/gohook"
 	"github.com/vcaesar/bitmap"
 )
@@ -39,7 +40,9 @@ var handlers = map[string]HandlerFunc{
 	"ReadAll":  ReadAll,
 	"WriteAll": WriteAll,
 	"TypeStr":  TypeStr,
+	"CopyStr":  CopyStr,
 	"PasteStr": PasteStr,
+	"CtrlTap":  CtrlTap,
 	// Screen
 	"CaptureScreen":   CaptureScreen,
 	"CaptureImg":      CaptureImg,
@@ -272,7 +275,7 @@ func KeyByListen(args Params, config Config) (any, error) {
 
 // KeyTap taps the keyboard code;
 func KeyTap(args Params, config Config) (any, error) {
-	err := robotgo.KeyTap(args.Keys[0], args.Keys[0:])
+	err := keyTap(args.Keys)
 	return nil, err
 }
 
@@ -311,10 +314,44 @@ func TypeStr(args Params, config Config) (any, error) {
 	return nil, nil
 }
 
+// CopyStr copy a string
+func CopyStr(args Params, config Config) (any, error) {
+	err := ctrlTap("c")
+	return nil, err
+}
+
 // PasteStr paste a string (support UTF-8),
 func PasteStr(args Params, config Config) (any, error) {
-	err := robotgo.PasteStr(args.Str)
+	if err := clipboard.WriteAll(args.Str); err != nil {
+		return nil, err
+	}
+	err := ctrlTap("v")
 	return nil, err
+}
+func CtrlTap(args Params, config Config) (any, error) {
+	err := ctrlTap(args.Keys[0])
+	return nil, err
+}
+func keyTap(keys []string) error {
+	for _, key := range keys {
+		if err := robotgo.KeyToggle(key, "down"); err != nil {
+			return err
+		}
+	}
+	robotgo.MilliSleep(100)
+	for _, key := range keys {
+		if err := robotgo.KeyToggle(key, "up"); err != nil {
+			return err
+		}
+	}
+	return nil
+}
+func ctrlTap(key string) error {
+	ctrl := "control"
+	if runtime.GOOS == "darwin" {
+		ctrl = "command"
+	}
+	return keyTap([]string{ctrl, key})
 }
 
 // Click click the mouse button

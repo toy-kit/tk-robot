@@ -16,5 +16,5 @@ func TestMain(m *testing.M) {
 	// 		break
 	// 	}
 	// }
-	fmt.Println(KeyByListen(Params{}, Config{}))
+	fmt.Println(CopyStr(Params{}, Config{}))
 }

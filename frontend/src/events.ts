@@ -27,6 +27,8 @@ export const components: any = {
 export const events: any = {
     Base: [
         { label: "Sleep", icon: "iconfont icon-sleep", component: "Sleep" },
+        { label: "ReadAll", icon: "iconfont icon-input" },
+        { label: "WriteAll", icon: "iconfont icon-input", component: "Str" },
     ],
     Mouse: [
         { label: "Click", icon: "iconfont icon-click", component: "Click" },
@@ -42,17 +44,17 @@ export const events: any = {
         { label: "KeyPress", icon: "iconfont icon-input", component: "Str" },
         { label: "KeyDown", icon: "iconfont icon-input", component: "Keys" },
         { label: "KeyUp", icon: "iconfont icon-input", component: "Keys" },
-        { label: "ReadAll", icon: "iconfont icon-input" },
-        { label: "WriteAll", icon: "iconfont icon-input", component: "Str" },
         { label: "TypeStr", icon: "iconfont icon-input", component: "Str" },
-        { label: "PasteStr", icon: "iconfont icon-input"},
+        { label: "CopyStr", icon: "iconfont icon-input" },
+        { label: "PasteStr", icon: "iconfont icon-input" },
+        { label: "CtrlTap", icon: "iconfont icon-input", component: "Keys" },
     ],
     Screen: [
-         { label: "CaptureScreen", icon: "iconfont icon-input" },
-         { label: "CaptureImg", icon: "iconfont icon-input", component: "AppName" },
-         { label: "BitmapFindStr", icon: "iconfont icon-input", component: "Str" },
-         { label: "BitmapFindPic", icon: "iconfont icon-input", component: "Path" },
-         { label: "BitmapFindColor", icon: "iconfont icon-input", component: "Color" },
+        { label: "CaptureScreen", icon: "iconfont icon-input" },
+        { label: "CaptureImg", icon: "iconfont icon-input", component: "AppName" },
+        { label: "BitmapFindStr", icon: "iconfont icon-input", component: "Str" },
+        { label: "BitmapFindPic", icon: "iconfont icon-input", component: "Path" },
+        { label: "BitmapFindColor", icon: "iconfont icon-input", component: "Color" },
     ],
     Window: [
         { label: "Run", icon: "iconfont icon-active", component: "Path" },
